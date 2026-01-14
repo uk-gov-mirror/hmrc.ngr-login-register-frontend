@@ -36,7 +36,7 @@ class BeforeYouGoController @Inject()(
   }
 
   def show(): Action[AnyContent] = Action { implicit request =>
-    Ok(beforeYouGoView(routes.StartController.show.url, routes.BeforeYouGoController.feedback.url))
+    Ok(beforeYouGoView(routes.ConfirmUTRController.show.url, routes.BeforeYouGoController.feedback.url))
   }
 
   def feedback: Action[AnyContent] = Action { _ =>

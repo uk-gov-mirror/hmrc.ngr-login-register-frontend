@@ -57,7 +57,7 @@ class BeforeYouGoControllerSpec extends ControllerSpecSupport with DefaultAwaitT
         val result = controller().show()(authenticatedFakeRequest)
         status(result) mustBe OK
         val content = contentAsString(result)
-        content must include("href=\"/ngr-login-register-frontend/register\"")
+        content must include("href=\"/ngr-login-register-frontend/confirm-utr\"")
       }
       "Return OK and feedback survey link is presented" in {
         val result = controller().show()(authenticatedFakeRequest)

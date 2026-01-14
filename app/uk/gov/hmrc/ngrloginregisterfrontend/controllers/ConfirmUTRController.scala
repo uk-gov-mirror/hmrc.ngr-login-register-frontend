@@ -54,6 +54,7 @@ class ConfirmUTRController @Inject()(view: ConfirmUTRView,
 
   def show(): Action[AnyContent] =
     (authenticate andThen isRegisteredCheck andThen hasMandotoryDetailsAction).async { implicit request =>
+      println(Console.MAGENTA + request.credId + Console.RESET)
       request.ratepayerRegistration.map{ ratePayer =>
         ratePayer.nino match {
           case Some(nino) =>

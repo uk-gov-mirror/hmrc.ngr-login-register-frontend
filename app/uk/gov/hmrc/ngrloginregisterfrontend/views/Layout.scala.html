@@ -48,7 +48,7 @@
             countdown           = Some(appConfig.countdown),
             keepAliveUrl        = Some(uk.gov.hmrc.ngrloginregisterfrontend.controllers.routes.KeepAliveController.keepAlive().url),
             keepAliveButtonText = Some(messages("timeout.keepAlive")),
-            signOutUrl          = Some(uk.gov.hmrc.ngrloginregisterfrontend.controllers.routes.BeforeYouGoController.show.url),
+            signOutUrl          = Some(uk.gov.hmrc.ngrloginregisterfrontend.controllers.routes.BeforeYouGoController.signout.url),
             signOutButtonText   = Some(messages("timeout.signOut")),
             title               = Some(messages("timeout.title")),
             message             = Some(messages("timeout.message")),
